@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./Images/jt_favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Justin Turner Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <img id="logo" src="Images/jt_logo.jpg" alt="logo">
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            ☰
-        </div>
+      <h1>Justin Turner</h1>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
     </nav>
-     <form action="https://formspree.io/f/xdkzavdj" method="POST" id="contact-form">
+
+    <div class="context">
+      <form
+        action="https://formspree.io/f/xdkzavdj"
+        method="POST"
+        id="contact-form"
+      >
         <h2>Contact Me</h2>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
-        
+
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" required />
 
@@ -32,8 +43,26 @@
 
         <button type="submit">Send Message</button>
         <p id="form-status"></p>
-    </form> 
+      </form>
+    </div>
+
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    </body>
+  </body>
+
+  <script src="scripts.js"></script>
 </html>

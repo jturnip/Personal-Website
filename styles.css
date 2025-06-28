@@ -1,3 +1,12 @@
+:root {
+  --bg-color: #0d0d0d;
+  --section-bg: #1a1a1a;
+  --text-color: #e0e0e0;
+  --accent-color: #ff5722;
+  --hover-color: #ffb29b;
+  --button-color: #ff3d00;
+  --link-color: #ff7300;
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +14,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Exo-2", sans-serif;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Exo:400,700");
@@ -15,25 +24,22 @@ body {
   padding: 0px;
 }
 
-body {
-  font-family: "Exo", sans-serif;
-}
-
 .context {
   width: 100%;
   position: absolute;
-  top: 50vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .context h1 {
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
   font-size: 50px;
+  margin: 20% auto;
 }
 
 .area {
-  background: #4e54c8;
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  background: var(--bg-color);
   width: 100%;
   height: 100vh;
 }
@@ -150,23 +156,29 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #333;
+  background-color: var(--section-bg);
   padding: 0.5rem 1rem;
-  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: var(--accent-color) solid;
+  border-top: var(--accent-color) solid;
+  font-family: "Orbitron", exo-2, sans-serif;
+}
+
+.navbar h1 {
+  color: var(--accent-color);
 }
 
 .nav-links li a {
-  color: white;
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #00bcd4;
+  color: var(--hover-color);
 }
 
 .nav-links li {
@@ -177,6 +189,7 @@ body {
   display: none;
   cursor: pointer;
   font-size: 2rem;
+  color: var(--accent-color);
 }
 
 .nav-links {
@@ -191,7 +204,7 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #1f1f1f;
+    background-color: var(--bg-color);
     position: absolute;
     top: 60px;
     right: 10px;
@@ -226,10 +239,10 @@ form#contact-form {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background: #222;
+  background: var(--section-bg);
   padding: 20px;
   border-radius: 10px;
-  color: #fff;
+  color: var(--text-color);
 }
 
 form#contact-form input,
@@ -241,8 +254,8 @@ form#contact-form textarea {
 }
 
 form#contact-form button {
-  background: #00b894;
-  color: white;
+  background: var(--button-color);
+  color: var(--text-color);
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -251,5 +264,23 @@ form#contact-form button {
 }
 
 form#contact-form button:hover {
-  background: #019875;
+  background: var(--hover-color);
+}
+
+/* project section */
+.project-card {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: var(--section-bg);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--text-color);
+}
+
+.project-card img {
+  border-radius: 10px;
+  border: var(--accent-color) solid;
 }
